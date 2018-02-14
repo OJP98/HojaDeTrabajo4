@@ -1,4 +1,6 @@
-public SinglyLinkedList<E> extends abstractList<E>
+package hojadetrabajo4;
+
+public class SinglyLinkedList<E> extends AbstractList<E>
 {
 
    protected int count; // list size
@@ -16,7 +18,7 @@ public SinglyLinkedList<E> extends abstractList<E>
   {
     return count;
   }
-  
+  /*
   public void addFirst(E value)
   // post: value is added to beginning of list
   {
@@ -42,7 +44,7 @@ public SinglyLinkedList<E> extends abstractList<E>
   {
       return head.value();
   }
-  
+  */
   public void addLast(E value)
   // post: adds value to end of list
   {
@@ -64,7 +66,7 @@ public SinglyLinkedList<E> extends abstractList<E>
 	  
    }
    
-   
+   /*
    public boolean contains(E value)
    // pre: value is not null
    // post: returns true iff value is found in list
@@ -78,3 +80,34 @@ public SinglyLinkedList<E> extends abstractList<E>
       }
       return finger != null;
    }
+*/
+   
+    @Override
+    public void clear() {
+        head = null;
+        count = 0;
+    }
+
+    @Override
+    public E getLast() {
+        Node node = head;
+        while (node.next() != null){
+            node = node.next();
+        }
+        return (E)node.data;
+    }
+
+    @Override
+    public E removeLast() {
+        Node node = head;
+        Node temp = null;
+        while (node.next() != null){
+            temp = node;
+            node = node.next();
+        }
+        temp.nextElement = null;
+        return (E)node.data;
+    }
+
+
+}

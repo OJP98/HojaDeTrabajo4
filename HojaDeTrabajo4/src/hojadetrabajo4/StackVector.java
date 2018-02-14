@@ -1,4 +1,6 @@
-package tarea.algoritmos.pkg2;
+package hojadetrabajo4;
+
+
 import java.util.Vector;
 /**
  * @author Paul Belches

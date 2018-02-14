@@ -1,11 +1,12 @@
-package tarea.algoritmos.pkg2;
+package hojadetrabajo4;
+
 
 /**
  *douglas.java 
  * Interfaz para Stacks
  * @author Paul Belches
- * @author Mario Sarmientos 
- * @since 30/01/18
+ * @author Oscar Juarez
+ * @since 19/02/18
  * @param <E> tipo de objeto que guardara el stack
  */
 public interface Stack<E> 

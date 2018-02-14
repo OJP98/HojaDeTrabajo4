@@ -1,4 +1,6 @@
-public CircularList<E> extends abstractList<E>
+package hojadetrabajo4;
+
+public class CircularList<E> extends AbstractList<E> {
 
 protected Node<E> tail; 
 protected int count;
@@ -57,4 +59,20 @@ public E removeLast()
    }
    count--;
    return temp.value();
+}
+
+    @Override
+    public int size() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void clear() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public E getLast() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

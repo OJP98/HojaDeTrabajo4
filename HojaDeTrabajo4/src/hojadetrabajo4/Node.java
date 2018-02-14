@@ -1,3 +1,5 @@
+package hojadetrabajo4;
+
 public class Node<E>
 {
    protected E data; // value stored in this element

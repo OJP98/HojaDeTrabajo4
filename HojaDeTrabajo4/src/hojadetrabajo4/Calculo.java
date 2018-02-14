@@ -1,10 +1,13 @@
-package tarea.algoritmos.pkg2;
+package hojadetrabajo4;
+
 /**
- * @author Paul Belches
- * @author Mario Sarmientos 
- * @since 30/01/18
+ * Clase que realiza las interacciones con el usuario.
+ * @author: Oscar Juarez - 17315
+ * @author: Paul Belches - 
+ * @since: 19/02/18
  */
-public class Calculo implements Calculadora {
+
+public class Calculo {
 
      /**
      *Constructor de la clase
