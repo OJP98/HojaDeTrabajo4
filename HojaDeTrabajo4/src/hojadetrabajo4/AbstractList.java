@@ -7,13 +7,6 @@ public abstract class AbstractList<E>
    // post: does nothing
    {
    }
-
-   public boolean isEmpty()
-   // post: returns true iff list has no elements
-   {
-      return size() == 0;
-   }
-  
     
     /**Metodo para agregar un elemento al stack 
      *
@@ -53,7 +46,7 @@ public abstract class AbstractList<E>
    @Override
     public boolean empty(){
    // post: returns true if and only if the stack is empty
-        return isEmpty();
+        return size() == 0;
     }
     /**Metodo para obtner el numero de elementos guardados
      *
@@ -62,7 +55,7 @@ public abstract class AbstractList<E>
    @Override
     public int size(){
    // post: returns the number of elements in the stack
-        return size();
+        return 0;
     }
 
 //  public boolean contains(E value)
