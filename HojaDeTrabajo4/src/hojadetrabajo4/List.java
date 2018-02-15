@@ -1,6 +1,6 @@
 package hojadetrabajo4;
 
-public interface List<E> 
+public interface List<E> extends Stack<E>
 {
    public int size();
    // post: returns number of elements in list
