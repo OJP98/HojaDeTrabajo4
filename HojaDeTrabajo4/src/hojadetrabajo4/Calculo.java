@@ -12,13 +12,16 @@ import java.io.*;
 
 public class Calculo {
      Stack<Double> a;
+     private boolean instance = true;
      /**
      *Constructor de la clase
      * POST: Construye una nueva Calculadora
      */
     public Calculo(String decision){               
-        
-        Stack<Double> a = StackFactory.usarFactory(decision);        
+        if (instance) {
+            instance = false;
+            Stack<Double> a = StackFactory.usarFactory(decision);        
+        }
                 
     }
 
