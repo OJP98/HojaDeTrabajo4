@@ -11,14 +11,14 @@ package hojadetrabajo4;
 import java.io.*;
 
 public class Calculo {
-
+     Stack<Double> a;
      /**
      *Constructor de la clase
      * POST: Construye una nueva Calculadora
      */
     public Calculo(String decision){               
         
-        Stack<Double> a = usarFactory(decision);        
+        Stack<Double> a = StackFactory.usarFactory(decision);        
                 
     }
 
