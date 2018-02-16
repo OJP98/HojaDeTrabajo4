@@ -1,11 +1,14 @@
 package hojadetrabajo4;
 
 /**
- * Clase que realiza las interacciones con el usuario.
+ * Clase que implementa los metodos que se utilizan para realizar las operaciones
  * @author: Oscar Juarez - 17315
- * @author: Paul Belches - 
- * @since: 19/02/18
+ * @author: Paul Belches - 17088
+ * @version: 16/02/18
+ * Algoritmos y Estructura de Datos - seccion: 10
  */
+
+import java.io.*;
 
 public class Calculo {
 
@@ -13,7 +16,10 @@ public class Calculo {
      *Constructor de la clase
      * POST: Construye una nueva Calculadora
      */
-    public Calculo(){
+    public Calculo(String decision){               
+        
+        Stack<Double> a = usarFactory(decision);        
+                
     }
 
     /** Método para operar expresiones en postfix
@@ -21,48 +27,105 @@ public class Calculo {
      * @param expresion escrita en postfix
      * @return el resultado de la operacion
      */
-    public double operar(String expresion){
-        Stack<Double> a = new StackVector();
+    public double operar(String expresion){                                
+        
         double num2;
         double num1;
+        
         String s = expresion.replaceAll("\\s","");
+        
         int i =0;
         while (i < s.length()) {
+            
             if (Character.isDigit(s.charAt(i))) {
                 a.push((double)Character.getNumericValue(s.charAt(i)));
+                
             } else {
+                
                 if (a.size() > 1) {
+                    
                     num2 = a.pop();
                     num1 = a.pop();
+                    
                     switch (s.charAt(i)){
+                        
                         case '+': 
                             a.push(num1 + num2); 
                         break;
+                        
                         case '-': 
                             a.push(num1 - num2); 
                         break;
+                        
                         case '/': 
+                            
                             if (num2 == 0){
                                 i = s.length();
                                 a.push( Double.NaN);     
+                                
                             } else 
                                 a.push(num1 / num2); 
+                            
                         break;
+                        
                         case '*': 
                             a.push(num1 * num2); 
                         break;
+                        
                         default:
                             i = s.length();
                             a.push( Double.NaN);
                         break;
                     }
+                    
                 } else {
                     i = s.length();
-                    a.push( Double.NaN);
+                    a.push(Double.NaN);
                 }
             }
             i++;
         }
         return a.pop(); 
     }
+    
+    
+    public String leerArchivo(String cadena) {
+                        
+        File f;
+        FileReader fr;
+        BufferedReader br;
+
+        String postFix = "";
+
+       //Este bloque de codigo tiene como objetivo leer la cadena de texto que
+       //el usuario haya establecido previamente
+        try {
+
+            f = new File (cadena);            
+            fr = new FileReader(f);
+            br = new BufferedReader(fr);      
+            
+            String linea;
+
+            while( (linea = br.readLine()) != null) {
+                postFix += linea;
+            }                                            
+            
+            br.close();
+            fr.close();
+
+        }
+        //Si el archivo se modifica manualmente o sucede cualquier otros tipo de
+        //error, este sera comunicado con el usuario
+        catch (Exception e) {
+
+            System.err.println("Se produjo un error: " + e);                 
+
+        }                
+
+        return postFix;
+
+    }
 }
+
+

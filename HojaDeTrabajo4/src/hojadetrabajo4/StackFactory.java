@@ -10,7 +10,8 @@ package hojadetrabajo4;
  * @author paulb
  */
 public class StackFactory {
-    public static Stack getDog(String criteria)
+    
+    public static Stack usarFactory(String criteria)
         {
           if ( criteria.equals("double") )
             return new DoubleLinkedList();
@@ -21,9 +22,8 @@ public class StackFactory {
           else if ( criteria.equals("vector") )
             return new StackVector();
           else if ( criteria.equals("array") )
-            return new StackArrayList();
-         
-
+            return new StackArrayList();        
           return null;
         } 
+    
 }
