@@ -24,6 +24,58 @@ public class calculoTest {
     /**
      * Metodo que tiene como tarea operar la cadena de texto ingresada por el usuario.     
      */
+    public void operarListaVectorTest(){
+        
+        Calculo calcu = new Calculo("vector");
+        
+        String expresion = "3 2 + 2 - 5 * 2 + 4 / 3 * 5 - 2 /";
+        double respuesta = 3.875;
+        
+        double resultado = calcu.operar(expresion);
+        
+        assertEquals(respuesta,resultado, 0.9);
+        
+    }
+    @Test
+    public void operarListaArrayTest(){
+        
+        Calculo calcu = new Calculo("array");
+        
+        String expresion = "3 2 + 2 - 5 * 2 + 4 / 3 * 5 - 2 /";
+        double respuesta = 3.875;
+        
+        double resultado = calcu.operar(expresion);
+        
+        assertEquals(respuesta,resultado, 0.9);
+        
+    }
+    @Test
+    public void operarListaDoubleTest(){
+        
+        Calculo calcu = new Calculo("double");
+        
+        String expresion = "3 2 + 2 - 5 * 2 + 4 / 3 * 5 - 2 /";
+        double respuesta = 3.875;
+        
+        double resultado = calcu.operar(expresion);
+        
+        assertEquals(respuesta,resultado, 0.9);
+        
+    }
+    @Test
+    public void operarListaSingleTest(){
+        
+        Calculo calcu = new Calculo("single");
+        
+        String expresion = "3 2 + 2 - 5 * 2 + 4 / 3 * 5 - 2 /";
+        double respuesta = 3.875;
+        
+        double resultado = calcu.operar(expresion);
+        
+        assertEquals(respuesta,resultado, 0.9);
+        
+    } 
+    @Test
     public void operarListaCircularTest(){
         
         Calculo calcu = new Calculo("circular");
