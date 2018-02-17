@@ -1,5 +1,12 @@
-package hojadetrabajo4;
+/**
+ * Clase que implementa los metodos para la clase vector
+ * @author: Oscar Juarez - 17315
+ * @author: Paul Belches - 17088
+ * @version: 16/02/18
+ * Algoritmos y Estructura de Datos - seccion: 10
+ */
 
+package hojadetrabajo4;
 
 import java.util.Vector;
 /**

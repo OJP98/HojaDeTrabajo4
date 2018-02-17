@@ -40,8 +40,9 @@ public class Calculo {
         int i =0;
         while (i < s.length()) {
             
-            if (Character.isDigit(s.charAt(i))) {
-                a.push((double)Character.getNumericValue(s.charAt(i)));
+            if ( Character.isDigit( s.charAt ( i ) ) ) {
+                
+                a.push( (double) Character.getNumericValue( s.charAt( i ) ) );
                 
             } else {
                 

@@ -1,3 +1,11 @@
+/**
+ * Interfaz que define los metodos para las listas
+ * @author: Oscar Juarez - 17315
+ * @author: Paul Belches - 17088
+ * @version: 16/02/18
+ * Algoritmos y Estructura de Datos - seccion: 10
+ */
+
 package hojadetrabajo4;
 
 public interface List<E> extends Stack<E>

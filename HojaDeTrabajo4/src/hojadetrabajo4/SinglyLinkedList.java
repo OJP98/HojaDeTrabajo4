@@ -1,3 +1,11 @@
+/**
+ * Clase que implementa los metodos para las listas simplemente encadenadas
+ * @author: Oscar Juarez - 17315
+ * @author: Paul Belches - 17088
+ * @version: 16/02/18
+ * Algoritmos y Estructura de Datos - seccion: 10
+ */
+
 package hojadetrabajo4;
 
 public class SinglyLinkedList<E> extends AbstractList<E>
@@ -106,6 +114,7 @@ public class SinglyLinkedList<E> extends AbstractList<E>
             node = node.next();
         }
         temp.nextElement = null;
+        count--;
         return (E)node.data;
     }
 

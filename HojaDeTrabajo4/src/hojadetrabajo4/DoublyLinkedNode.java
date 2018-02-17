@@ -1,3 +1,11 @@
+/**
+ * Clase que implementa los metodos para los nodos dobles, usados por las listas doblemente encadenadas.
+ * @author: Oscar Juarez - 17315
+ * @author: Paul Belches - 17088
+ * @version: 16/02/18
+ * Algoritmos y Estructura de Datos - seccion: 10
+ */
+
 package hojadetrabajo4;
 
 public class DoublyLinkedNode<E> {

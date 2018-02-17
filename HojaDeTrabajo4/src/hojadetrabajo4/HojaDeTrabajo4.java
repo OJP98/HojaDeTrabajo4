@@ -17,11 +17,11 @@ public class HojaDeTrabajo4 {
         Scanner teclado = new Scanner(System.in);
                         
         int decision;
-        int decision2;
-        int decision3;
-        double resultado = 0;
+        double resultado;
                 
-        //Linea de codigo que lee inmediatamente el archivo .txt        
+        //Linea de codigo que lee inmediatamente el archivo .txt
+            calcu = new Calculo("");
+            String postFix = calcu.leerArchivo("./cadenaPostfix.txt");        
         
         System.out.println("\nBienvenido a la calculadora!\n");
                 
@@ -35,9 +35,7 @@ public class HojaDeTrabajo4 {
             decision = teclado.nextInt();
             
             if (decision==1){
-                
-                calcu = new Calculo("");
-                String postFix = calcu.leerArchivo("./cadenaPostfix.txt");
+                                
                 System.out.println("La cadena a operar es: " + postFix);
                 
             } else if (decision == 2) {
@@ -47,7 +45,8 @@ public class HojaDeTrabajo4 {
                 System.out.println("2. Vectores");
                 System.out.println("3. ArrayList\n");
                 
-                decision = teclado.nextInt();        
+                decision = teclado.nextInt();    
+                String parametro="";
                 
                     if (decision == 1){
                         System.out.println("\nQue tipo de lista desea utilizar:");
@@ -58,27 +57,29 @@ public class HojaDeTrabajo4 {
                         decision = teclado.nextInt();
                         
                         if (decision == 1){
-                            calcu = new Calculo("single");
+                            parametro = "single";
                          } else if (decision==2) {
-                             calcu = new Calculo("double");
+                             parametro = "double";
                         } else if (decision==3) {
-                            calcu = new Calculo("circular");
+                            parametro = "circular";
                         } else {
                             System.out.println("Opcion invalida");
                         }
                         
                     } else if (decision==2){
-                        calcu = new Calculo("vector");
+                        parametro = "vector";
                         
                     } else if (decision==3) {
-                        calcu = new Calculo("array");
+                        parametro = "array";
                         
                     } else {
                         System.out.println("Opcion invalida");
                     }
                     
-                
-                
+                    calcu = new Calculo(parametro);                   
+                    resultado = calcu.operar(postFix);
+                    System.out.println("El total es de: " + resultado);
+                                    
             } else if (decision == 3) {
                 
                 System.out.println("Saliendo del programa...");
