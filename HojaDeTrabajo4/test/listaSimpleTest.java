@@ -37,8 +37,10 @@ public class listaSimpleTest {
         a.removeLast();
         
         int resultado = a.size();    
+       
+        assertEquals(4, resultado, 0);
+        assertEquals(4, (int)a.removeLast(), 0);
         
-        assertEquals(4, resultado, 0);        
     }
     
     @Test

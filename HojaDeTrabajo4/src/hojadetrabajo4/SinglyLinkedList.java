@@ -108,7 +108,7 @@ public class SinglyLinkedList<E> extends AbstractList<E>
     @Override
     public E removeLast() {
         Node node = head;
-        Node temp = null;
+        Node temp = node;
         while (node.next() != null){
             temp = node;
             node = node.next();

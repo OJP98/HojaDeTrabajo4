@@ -20,7 +20,7 @@ public class Calculo {
     public Calculo(String decision){               
         if (instance) {
             instance = false;
-            Stack<Double> a = StackFactory.usarFactory(decision);        
+            a = StackFactory.usarFactory(decision);        
         }
                 
     }
@@ -31,7 +31,6 @@ public class Calculo {
      * @return el resultado de la operacion
      */
  public double operar(String expresion){
-        Stack<Double> a = new StackVector();
         double num2;
         double num1;
         String s = expresion.replaceAll("\\s","");

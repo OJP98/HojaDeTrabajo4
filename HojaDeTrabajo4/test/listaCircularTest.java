@@ -33,7 +33,8 @@ public class listaCircularTest {
         int respuesta = listaC.size();
         
         assertEquals(3,respuesta);
-        
+        assertEquals(3,listaC.removeLast());
+        assertEquals(2,listaC.removeLast());
     }
     
     @Test

@@ -35,7 +35,7 @@ public abstract class AbstractList<E>
     public E pop(){
    // pre: stack is not empty
    // post: most recently pushed item is removed and returned
-        return getLast();
+        return removeLast();
     }
     /**Metodo para ver cual fue el ultimo objeto que se guardo
      *
