@@ -20,6 +20,10 @@ public CircularList()
    count = 0;
 }
 
+/**
+ * Agrega un elemento al inicio de la lista
+ * @param value: El valor que se desea agregar
+ */
 public void addFirst(E value)
 // pre: value non-null
 // post: adds element to head of list
@@ -35,22 +39,26 @@ public void addFirst(E value)
    count++;
 }
 
-
+/**
+ * Agrega un valor al final de la lista.
+ * @param value: El valor a agregar.
+ * pre: value non-null
+ * post: adds element to tail of list
+ */
 public void addLast(E value)
-// pre: value non-null
-// post: adds element to tail of list
 {
    // new entry:
    addFirst(value);
    tail = tail.next();  
 }
 
-
-// lo dificil es quitar el elemento de la cola
-
+/**
+ * Elimina el ultimo elemento de la lista.
+ * @return: El ultimo elemento de la lista.
+ * pre: !isEmpty()
+ * post: returns and removes value from tail of list
+ */
 public E removeLast()
-// pre: !isEmpty()
-// post: returns and removes value from tail of list
 {
    Node<E> finger = tail;
    while (finger.next() != tail) {
@@ -70,17 +78,30 @@ public E removeLast()
 }
 
     @Override
+    /**
+     * Retorna el tamano de la lista.
+     * POST: El numero de elemento en la lista
+     */
     public int size() {
         return count;
     }
 
     @Override
+    /**
+     * elimina los elementos dentro de la lista
+     * POST: Vacia la lista
+     */
     public void clear() {
         tail = null;
         count = 0;
     }
 
     @Override
+    /**
+     * Retrona el ultimo elemento de la lista
+     * PRE: Que la lista no este vacia
+     * POST: El ultima elemento de la lista
+     */
     public E getLast() {
         return tail.value();
     }

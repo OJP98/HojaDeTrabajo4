@@ -21,10 +21,14 @@ public DoubleLinkedList()
    count = 0;
 }
 
+/**
+ * Agrega un elemnento al final de la lista
+ * @param value: El elemento a agregar
+ * pre: value is not null
+ * post: adds new value to tail of list
+ */
 @Override
 public void addLast(E value)
-// pre: value is not null
-// post: adds new value to tail of list
 {
    // construct new element
    tail = new DoublyLinkedNode<E>(value, null, tail);
@@ -33,11 +37,14 @@ public void addLast(E value)
    count++;
 }
 
-
+/**
+ * Remueve el ultimo elemento de la lista y lo elimina
+ * @return: El ultimo elemento de la lista
+ * pre: list is not empty
+ * post: removes value from tail of list
+ */
 @Override
 public E removeLast()
-// pre: list is not empty
-// post: removes value from tail of list
 {
    DoublyLinkedNode<E> temp = tail;
    tail = tail.previous();
@@ -50,11 +57,20 @@ public E removeLast()
    return temp.value();
 }
 
+/**
+ * Devuelve el tamano de la lista
+ * @return: El tamano de la lista
+ * POST: Devuelve el numero de elementos dentro de la lista
+ */
 @Override
 public int size() {
     return count;
 }
 
+/**
+ * Borra todos lo elementos dentro de la lista
+ * POST: Vacia la lista entera
+ */
 @Override
 public void clear() {
    head = null;
@@ -63,6 +79,12 @@ public void clear() {
     
 }
 
+/**
+ * Devuelve el ultimo elemento de la lista
+ * @return: El ultimo elemento en la lista
+ * PRE: Que la lista no este vacia
+ * POST: Devuelve el ultimo valor de la lista
+ */
 @Override
 public E getLast() {
     return tail.value();

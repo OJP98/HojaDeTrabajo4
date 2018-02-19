@@ -1,3 +1,11 @@
+/**
+ * Prueba unitaria que realiza tests de la clase lisa cricular y sus metodos
+ * @author: Oscar Juarez - 17315
+ * @author: Paul Belches - 17088
+ * @version: 16/02/18
+ * Algoritmos y Estructura de Datos - seccion: 10
+ */
+
 import hojadetrabajo4.CircularList;
 import hojadetrabajo4.List;
 import org.junit.Test;

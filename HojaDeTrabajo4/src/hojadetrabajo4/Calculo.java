@@ -74,7 +74,11 @@ public class Calculo {
         return a.pop(); 
     }
     
-    
+    /**
+     * Metodo que permite que se abra el archivo txt que contiene la cadena.
+     * @param cadena: la ubicacion del archivo txt
+     * @return: La cadena postfix como un string
+     */
     public String leerArchivo(String cadena) {
                         
         File f;

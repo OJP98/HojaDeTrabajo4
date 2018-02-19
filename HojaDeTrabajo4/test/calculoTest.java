@@ -22,7 +22,7 @@ public class calculoTest {
     
     @Test
     /**
-     * Metodo que tiene como tarea operar la cadena de texto ingresada por el usuario.     
+     * Metodo que tiene como tarea operar la cadena de texto ingresada por el usuario con la implementacion vector.     
      */
     public void operarListaVectorTest(){
         
@@ -36,7 +36,11 @@ public class calculoTest {
         assertEquals(respuesta,resultado, 0.9);
         
     }
-    @Test
+    
+    /**
+     * Metodo que tiene como tarea operar la cadena de texto ingresada por el usuario con la implementacion arralist.     
+     */
+    @Test    
     public void operarListaArrayTest(){
         
         Calculo calcu = new Calculo("array");
@@ -49,6 +53,10 @@ public class calculoTest {
         assertEquals(respuesta,resultado, 0.9);
         
     }
+    
+    /**
+     * Metodo que tiene como tarea operar la cadena de texto ingresada por el usuario con la implementacion lista doble.     
+     */
     @Test
     public void operarListaDoubleTest(){
         
@@ -62,6 +70,10 @@ public class calculoTest {
         assertEquals(respuesta,resultado, 0.9);
         
     }
+    
+    /**
+     * Metodo que tiene como tarea operar la cadena de texto ingresada por el usuario con la implementacion lista simple.     
+     */
     @Test
     public void operarListaSingleTest(){
         
@@ -75,6 +87,10 @@ public class calculoTest {
         assertEquals(respuesta,resultado, 0.9);
         
     } 
+    
+    /**
+     * Metodo que tiene como tarea operar la cadena de texto ingresada por el usuario con la implementacion lista circular.     
+     */
     @Test
     public void operarListaCircularTest(){
         

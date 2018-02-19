@@ -1,4 +1,10 @@
-
+/**
+ * Prueba unitaria que realiza tests de la clase vector y sus metodos
+ * @author: Oscar Juarez - 17315
+ * @author: Paul Belches - 17088
+ * @version: 16/02/18
+ * Algoritmos y Estructura de Datos - seccion: 10
+ */
 
 import hojadetrabajo4.Stack;
 import hojadetrabajo4.StackVector;

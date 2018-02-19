@@ -1,7 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Prueba unitaria que realiza tests de la clase array list y sus metodos
+ * @author: Oscar Juarez - 17315
+ * @author: Paul Belches - 17088
+ * @version: 16/02/18
+ * Algoritmos y Estructura de Datos - seccion: 10
  */
 
 import hojadetrabajo4.Stack;
@@ -10,14 +12,10 @@ import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Usuario
- */
 public class arrayListTest {
     
     Stack stack = new StackArrayList<>();
-    
+        
     public arrayListTest() {
         
         stack.push(1);

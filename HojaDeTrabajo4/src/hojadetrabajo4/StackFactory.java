@@ -1,6 +1,6 @@
 
 /**
- * Clase que define el patron de diseno Factory
+ * Clase que define el patron de diseno Factory segun el parametro que se le envie desde la clase principal
  * @author: Oscar Juarez - 17315
  * @author: Paul Belches - 17088
  * @version: 16/02/18

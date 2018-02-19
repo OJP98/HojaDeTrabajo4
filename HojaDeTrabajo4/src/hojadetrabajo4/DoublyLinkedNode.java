@@ -25,40 +25,65 @@ protected DoublyLinkedNode<E> previousElement;
             previousElement.nextElement = this;
     }
 
-    public DoublyLinkedNode(E v)
-    // post: constructs a single element
+    /**
+     * Crea un nuevo nodo
+     * @param v: El elemento a agregar
+     * post: constructs a single element
+     */
+    public DoublyLinkedNode(E v)    
     {
         this(v,null,null);
     }
-    public DoublyLinkedNode<E> next()
-   // post: returns reference to next value in list
+    
+    /**
+     * Retorna la referencia del proximo elemento en la lista
+     * post: returns reference to next value in list
+     * @return: El proximo elemento
+     */
+    public DoublyLinkedNode<E> next()   
    {
       return nextElement;
    }
-    public void setNext(DoublyLinkedNode<E> next)
-   // post: sets reference to new next value
+    
+    /**
+     * Establece el elemento proximo
+     * @param next: El elemento a establecer
+     * post: sets reference to new next value
+     */
+    public void setNext(DoublyLinkedNode<E> next)   
    {
       nextElement = next;
    }
 
-   public E value()
-   // post: returns value associated with this element
+    /**
+     * Devuelve el valor del elemento
+     * @return: El valor del elemento.
+     * post: returns value associated with this element
+     */
+   public E value()   
    {
       return data;
    }
 
-   public void setValue(E value)
-   // post: sets value associated with this element
+   /**
+    * Establece el valor del elemento
+    * @param value: El valor a establecer
+    * post: sets value associated with this element
+    */
+   public void setValue(E value)   
    {
       data = value;
    }
    
+   /**
+    * Establece el elemento previo
+    * @param next: El elemento a establecer
+    */
    public void setPrevious(DoublyLinkedNode<E> next)
    // post: sets reference to new next value
    {
       previousElement = next;
-   }
-     public DoublyLinkedNode<E> previous()
+   }     public DoublyLinkedNode<E> previous()
    // post: returns reference to next value in list
    {
       return previousElement;
